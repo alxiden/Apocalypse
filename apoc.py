@@ -53,28 +53,28 @@ def item_check ():
     global food
     global items
     if "item" in current_room:
-        if current_room["item"] is "fuel":
+        if current_room["item"] == "fuel":
             if fuel != "1":
                 items.append("Fuel")
             else:
                 pass
             fuel = "1"
             return fuel
-        elif current_room["item"] is "gun":
+        elif current_room["item"] == "gun":
             if gun != "1":
                 items.append("Gun and ammo")
             else:
                 pass
             gun ="1"
             return gun
-        elif current_room["item"] is "crowbar":
+        elif current_room["item"] == "crowbar":
             if crowbar != "1":
                 items.append("Crowbar")
             else:
                 pass
             crowbar = "1"
             return crowbar
-        elif current_room["item"] is "food":
+        elif current_room["item"] == "food":
             if food != "1":
                 items.append("Food")
             else:
@@ -98,7 +98,7 @@ while True:
     print()
     print("you are currently in the {} ".format(current_room["name"]))
     print("you can go {}".format(current_room["1"]))
-    if current_room["2"] is " ":
+    if current_room["2"] == " ":
         pass
     else:
         print("or {}".format(current_room["2"]))
